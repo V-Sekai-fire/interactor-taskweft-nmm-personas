@@ -1,0 +1,20 @@
+[workspace]
+name = "taskweft-nmm-personas-bus-server"
+version = "0.1.0"
+description = "Python side of the taskweft-nmm-personas project: nmm2 env served over 2-contract/bus (iceoryx2). Elixir owns dispatch, traces, MaskScore rows."
+authors = ["K. S. Ernest (iFire) Lee <ernest.lee@chibifire.com>"]
+channels = ["conda-forge"]
+platforms = ["osx-arm64", "linux-64"]
+
+[dependencies]
+python = "3.11.*"
+pip = "*"
+
+[pypi-dependencies]
+nmmo = "==2.1.2"
+iceoryx2 = "==0.9.3"
+cbor2 = "*"
+zstandard = "*"
+
+[tasks]
+serve = "python priv/env_bus_server.py"

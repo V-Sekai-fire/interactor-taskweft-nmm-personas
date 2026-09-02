@@ -1,0 +1,25 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "grafcet": "https://project-agrafe.github.io/ns/grafcet#",
+    "sfc":   { "@id": "grafcet:name" },
+    "descr": { "@id": "grafcet:description" },
+    "V":     { "@id": "grafcet:internalVariables", "@container": "@index" },
+    "S":     { "@id": "grafcet:steps",             "@container": "@list"  },
+    "^":  "grafcet:InitialStep",
+    "&>": "grafcet:AndDivergence",
+    "&<": "grafcet:AndConvergence"
+  },
+  "@type": "grafcet:SFC",
+  "sfc": "trader",
+  "descr": "Neural MMO persona: prioritise gold accumulation. Sense market, list surplus inventory, buy cheap. Never initiates combat. Basic upkeep interleaved.",
+  "V": { "sensed": 0, "listed": 0, "bought": 0, "moved": 0, "turn_done": 0 },
+  "S": [
+    ["^"],
+    ["sense",        "",           "V.sensed:=1",     "1h"],
+    ["sell_surplus", "X.sensed",   "V.listed:=1",     "1h"],
+    ["buy_cheap",    "X.listed",   "V.bought:=1",     "1h"],
+    ["wander",       "X.bought",   "V.moved:=1",      "1h"],
+    ["end_turn",     "X.moved",    "V.turn_done:=1",  "1h"]
+  ]
+}

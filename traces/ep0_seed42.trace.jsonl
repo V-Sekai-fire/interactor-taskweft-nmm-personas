@@ -1,0 +1,16 @@
+{"env_tick":0,"n_alive":128,"reward_sum":1.0,"wall_us":252487}
+{"env_tick":1,"n_alive":128,"reward_sum":1.0,"wall_us":390024}
+{"env_tick":2,"n_alive":128,"reward_sum":1.0,"wall_us":503470}
+{"env_tick":3,"n_alive":128,"reward_sum":1.0,"wall_us":620357}
+{"env_tick":4,"n_alive":128,"reward_sum":1.0,"wall_us":730050}
+{"env_tick":5,"n_alive":128,"reward_sum":1.0,"wall_us":847123}
+{"env_tick":6,"n_alive":128,"reward_sum":1.0,"wall_us":958055}
+{"env_tick":7,"n_alive":128,"reward_sum":1.0,"wall_us":1068171}
+{"env_tick":8,"n_alive":128,"reward_sum":1.0,"wall_us":1178308}
+{"env_tick":9,"n_alive":128,"reward_sum":1.0,"wall_us":1292318}
+{"env_tick":10,"n_alive":128,"reward_sum":1.0,"wall_us":1403885}
+{"env_tick":11,"n_alive":128,"reward_sum":1.0,"wall_us":1508398}
+{"env_tick":12,"n_alive":128,"reward_sum":1.0,"wall_us":1631884}
+{"env_tick":13,"n_alive":128,"reward_sum":1.0,"wall_us":1734878}
+{"env_tick":14,"n_alive":128,"reward_sum":1.0,"wall_us":1842903}
+{"env_tick":15,"n_alive":128,"reward_sum":1.0,"wall_us":1946844}

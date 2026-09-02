@@ -1,0 +1,25 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "grafcet": "https://project-agrafe.github.io/ns/grafcet#",
+    "sfc":   { "@id": "grafcet:name" },
+    "descr": { "@id": "grafcet:description" },
+    "V":     { "@id": "grafcet:internalVariables", "@container": "@index" },
+    "S":     { "@id": "grafcet:steps",             "@container": "@list"  },
+    "^":  "grafcet:InitialStep",
+    "&>": "grafcet:AndDivergence",
+    "&<": "grafcet:AndConvergence"
+  },
+  "@type": "grafcet:SFC",
+  "sfc": "hunter",
+  "descr": "Neural MMO persona: seek and engage nearest agent when health high. Retreat and gather when low. Water and food are secondary and interleaved.",
+  "V": { "sensed": 0, "healed": 0, "hunted": 0, "attacked": 0, "turn_done": 0 },
+  "S": [
+    ["^"],
+    ["sense",         "",           "V.sensed:=1",    "1h"],
+    ["heal_or_flee",  "X.sensed",   "V.healed:=1",    "1h"],
+    ["seek_target",   "X.healed",   "V.hunted:=1",    "1h"],
+    ["attack_or_move","X.hunted",   "V.attacked:=1",  "1h"],
+    ["end_turn",      "X.attacked", "V.turn_done:=1", "1h"]
+  ]
+}

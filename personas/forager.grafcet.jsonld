@@ -1,0 +1,25 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "grafcet": "https://project-agrafe.github.io/ns/grafcet#",
+    "sfc":   { "@id": "grafcet:name" },
+    "descr": { "@id": "grafcet:description" },
+    "V":     { "@id": "grafcet:internalVariables", "@container": "@index" },
+    "S":     { "@id": "grafcet:steps",             "@container": "@list"  },
+    "^":  "grafcet:InitialStep",
+    "&>": "grafcet:AndDivergence",
+    "&<": "grafcet:AndConvergence"
+  },
+  "@type": "grafcet:SFC",
+  "sfc": "forager",
+  "descr": "Neural MMO persona: prioritise food and water when either drops, otherwise wander. Never initiates combat. Retreats when engaged.",
+  "V": { "sensed": 0, "watered": 0, "fed": 0, "moved": 0, "turn_done": 0 },
+  "S": [
+    ["^"],
+    ["sense",       "",           "V.sensed:=1",     "1h"],
+    ["seek_water",  "X.sensed",   "V.watered:=1",    "1h"],
+    ["gather_food", "X.watered",  "V.fed:=1",        "1h"],
+    ["wander",      "X.fed",      "V.moved:=1",      "1h"],
+    ["end_turn",    "X.moved",    "V.turn_done:=1",  "1h"]
+  ]
+}
