@@ -17,4 +17,4 @@ mix nmm.run
 
 ## Licence
 
-MIT, per the SPDX headers in the sources, and the bus NIF source is MIT OR Apache-2.0. There is no `LICENSE` file.
+MIT. See [LICENSE](LICENSE).
