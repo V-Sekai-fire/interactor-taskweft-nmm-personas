@@ -5,7 +5,7 @@ defmodule TaskweftNmmPersonas.MaskScore do
   @moduledoc """
   Builds one MaskScore row per (persona, episode, dimension) and
   serialises to JSONL + Parquet. Field names track the EditScore
-  schema documented in RFD 1173's MASKSCORE.md.
+  schema documented in RFD66606-1173's MASKSCORE.md.
 
   Score columns are game-native analogues (survival fraction and
   normalised avg health) rather than the RFD's render-and-compare
